@@ -49,14 +49,5 @@ end
 get '/tweets/:username' do
   @username = params[:username]
   @my_tweets = Twitter.user_timeline(@username)
-  @picture = []
-  # @my_tweets.each do |tweet|
-  #   if tweet[:media] == []
-  #     @picture << 0
-  #   else
-  #     @picture << tweet[:media]
-  #   end
-  # end
-  # @tweetid
- erb :tweets
+  erb :tweets
 end

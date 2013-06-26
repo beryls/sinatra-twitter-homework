@@ -1,10 +1,13 @@
 <h1>Tweets from the mind-brain of <em><%= @username %></em></h1>
-<ul>
-  <% @my_tweets.each do |tweet| %>
-    <li>
-      <a href="http://www.twitter.com"><%= tweet[:text] %></a>
-    </li>
-  <% end %>
-</ul>
 
-<% #@picture[0] %>
+<% @my_tweets.each do |tweet| %>
+<ul>
+  <li>
+    <a href="http://twitter.com/<%= @username %>/status/<%= tweet[:id] %>">
+      <%= tweet[:text] %>
+    </a>
+      <img src="
+      <%= tweet[:media].first[:media_url] unless tweet[:media].empty? %>">
+  </li>
+</ul>
+<% end %>
