@@ -1,4 +1,6 @@
 <h1>Tweets from the mind-brain of <em><%= @username %></em></h1>
+<h3><%= @my_tweets[0][:user][:name] %></h3>
+<h3><%= @my_tweets[0][:user][:description] %></h3>
 
 <% @my_tweets.each do |tweet| %>
 <ul>
